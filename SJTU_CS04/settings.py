@@ -65,7 +65,7 @@ DATABASES = {
         'NAME': 'SJTU_CS04',
         'ENGINE': 'django.db.backends.mysql',
         'USER': 'root',
-        'PASSWORD': '345243tc',
+        'PASSWORD': 'ROOT',
         'HOST': '',
         'PORT': '',
     }

@@ -1,5 +1,83 @@
-<html>
-<body>
-	<h1> Welcome </h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>home page</title>
+
+
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/indroid.css">
+    <script type="text/javascript" src='/static/js/jquery.min.js'></script>
+   </head>
+
+ <body>
+
+ 		<div class="row-fluid">
+			<div class="col-md-17 header">
+				<div class="row-fluid">
+					<div class="col-md-10 header-title">
+						Welcome to SJTU-B04
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+ <!-- ========= main ============= -->
+
+		<div class="row-fluid">
+			<div class="col-md-12" style="margin-top:5px;">
+
+				<!-- ======= user ======= -->
+
+				<div class="row-fluid">
+					<div class="col-md-12 welcome-user" >
+						{% if testerName %}	
+							<p> 欢迎, {{testerName}} </p>
+							<a href = '/testerlogout'> 登出 </a>
+						{% else %}
+							<a href ='/testerlogin'> login </a>
+						{% endif %}
+					</div>
+				</div>
+
+
+				<!-- ======= tab ======== -->
+
+				<div class="row-fluid">
+					<div class="col-md-11" style="margin-left:30px;margin-top:20px;">
+						<div class="tabbable" id="tabs-653642">
+							<ul class="nav nav-tabs"  style="border:0px;">
+								<li >
+									<a href="/index" style="margin-left:30px;" > 班级简介 </a>
+								</li>
+								<li class="active">
+									<a style="font-size:18px;color:white;text-align:center;background-color:#318487;border-radius:8px;height:50px;width:100px;margin-bottom:-5px;z-index:-1;" href="/result" > 链接 </a>
+								</li>
+							</ul>
+
+							<div class="tab-content">
+
+								<div class="tab-pane active" style="color:white;">
+                                    ">
+                                    	<ul>
+                                    		
+                                    	</ul>
+
+                                    </div>
+                                </div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 </body>
 </html>
