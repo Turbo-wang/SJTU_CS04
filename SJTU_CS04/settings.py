@@ -36,6 +36,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'class_activity',
+)
+
+TEMPLATE_DIRS = (
+    '/home/tcoops/djangotest/SJTU_CS04/class_activity/templates',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -57,8 +62,12 @@ WSGI_APPLICATION = 'SJTU_CS04.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'SJTU_CS04',
+        'ENGINE': 'django.db.backends.mysql',
+        'USER': 'root',
+        'PASSWORD': '345243tc',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -67,7 +76,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -80,3 +89,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(__file__), 'static').replace('\\','/'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR,"static/")
