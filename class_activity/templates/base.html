@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+{%block head %}
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <title>home page</title>
+
+        {% block reference %}
+            <link rel="stylesheet" href="/static/css/bootstrap.css">
+            <link rel="stylesheet" href="/static/css/indroid.css">
+            <link rel="stylesheet" href="/static/css/home.css">
+            <link rel="stylesheet" href="/static/css/flip.css">
+            <script type="text/javascript" src='/static/js/jquery.min.js'></script>
+            <script type="text/javascript" src='/static/js/slide.js'></script>
+        {% endblock %}
+    </head>
+{% endblock %}
+
+
+ <body>
+    {% block body-head%}
+ 		<div class="row-fluid" >
+			<div class="col-md-17 header" style="height:100px">
+				<div class="row-fluid">
+					<div class="col-md-20 header-title" style='margin:0% 0 0 0'>
+						<img src="/static/img/sjtu.png">
+						<span style="margin-left:50px"> 欢迎来到上海交通大学计算机系 B1503394 班 </span>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+    {% endblock %}
+
+
+ <!-- ========= main ============= -->
+    {% block body-nav%}
+
+				<div class="row-fluid">
+					<div class="col-md-12 welcome-user" >
+						{% if testerName %}	
+							<p> 欢迎, {{testerName}} </p>
+							<a href = '/testerlogout'> 登出 </a>
+						{% else %}
+							<a href ='/testerlogin' style="color:white"> login </a>
+						{% endif %}
+					</div>
+					<ul class="nav nav-tabs"  style="border:0px;">
+						<li>
+							<a href="/index" style="margin-left:30px;color:white" > 首页 </a>
+						</li>
+						<li>
+							<a href="/index" style="margin-left:30px;color:white" > 班级简介 </a>
+						</li>
+						<li>
+							<a href="/index" style="margin-left:30px;color:white" > 课余生活 </a>
+						</li>
+						<li>
+							<a href="/index" style="margin-left:30px;color:white" > 竞技场 </a>
+						</li>
+						<li>
+							<a href="/index" style="margin-left:30px;color:white" > Fun </a>
+						</li>
+
+					</ul>
+				</div>
+        {% endblock %}
+
+        {%block body-content %}
+		
+        {% endblock %}
+
+</body>
+</html>

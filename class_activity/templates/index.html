@@ -1,130 +1,62 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>home page</title>
+{% extends "base.html" %}
 
 
-    <link rel="stylesheet" href="/static/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/css/indroid.css">
-    <link rel="stylesheet" href="/static/css/home.css">
-    <link rel="stylesheet" href="/static/css/flip.css">
-    <script type="text/javascript" src='/static/js/jquery.min.js'></script>
-    <script type="text/javascript" src='/static/js/slide.js'></script>
-    <script type="text/javascript" src='/static/js/flip.js'></script>
-   </head>
+ {%block body-content %}
 
- <body>
+	 <div class="w1280">
+	            <div class="banner">
+	                <div class="djs"><span id="new_year"></span></div>
+	                <!-- flexslider begin -->
+	                <div id="demo01" class="flexslider">
+	                    <ul class="slides">
+	                            <li>
+	                                    <a target="_blank" href="">
+	                                        <div class="img1" style="no-repeat center top;">
+	                                        	<img src="/static/img/a.jpg"></div>
+	                                    </a>
+	                            </li>
+	                            <li>
+	                                    <a target="_blank" href="">
+	                                        <div class="img1" style="no-repeat center top;">
+	                                        	<img src="/static/img/b.jpg"></div>
+	                                    </a>
+	                            </li>
+	                            <li>
+	                                    <div class="img1" style="no-repeat center top;">
+	                                    	<img src="/static/img/c.jpg"></div>
+	                            </li>
+	                            <li>
+	                                    <div class="img1" style="no-repeat center top;"><img src="/static/img/d.jpg"></div>
+	                            </li>
+	                            <li>
+	                                    <a target="_blank" href="">
+	                                        <div class="img1" style="no-repeat center top;"><img src="/static/img/e.jpg"></div>
+	                                    </a>
+	                            </li>
+	                             <li>
+	                                    <a target="_blank" href="">
+	                                        <div class="img1" style="no-repeat center top;"><img src="/static/img/f.jpg"></div>
+	                                    </a>
+	                            </li>
+	                    </ul>
+	                </div>
+	                <!-- flexslider end -->
+	                <div class="logo_left">
+	                    <img src="/static/imgs/logo_left.png" width="63" height="92" alt="" />
+	                </div>
+	                <div class="logo_right">
+	                    <img src="/static/imgs/logo_right.png" width="92" height="92" alt="" />
+	                </div>
+	            </div>
+	 </div>
 
- 		<div class="row-fluid" >
-			<div class="col-md-17 header" style="height:100px">
-				<div class="row-fluid">
-					<div class="col-md-20 header-title" style='margin:0% 0 0 0'>
-						<img src="/static/img/sjtu.png">
-						<span style="margin-left:50px"> 欢迎来到上海交通大学计算机系 B1503394 班 </span>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-
-
- <!-- ========= main ============= -->
-
-		<div class="row-fluid" >
-			<div class="col-md-12" style="margin-top:0px;">
-				<!-- ======= user ======= -->
-
-				<div class="row-fluid">
-					<div class="col-md-12 welcome-user" >
-						{% if testerName %}	
-							<p> 欢迎, {{testerName}} </p>
-							<a href = '/testerlogout'> 登出 </a>
-						{% else %}
-							<a href ='/testerlogin'> login </a>
-						{% endif %}
-					</div>
-				</div>
-
-
-				<!-- ======= tab ======== -->
-
-				<div class="row-fluid">
-					<div class="col-md-11" style="margin-left:30px">
-						<div class="tabbable" id="tabs-653642">
-							<ul class="nav nav-tabs"  style="border:0px; margin-right:20%">
-								<li>
-									<a href="/index" style="margin-left:30px;" > 班级简介 </a>
-								</li>
-							</ul>
-
-			<div class="tab-content" style="margin-right:20%">
-
-				<div class="tab-pane active" style="color:white;margin-right:20%">
-					 <div class="w1280">
-		            	<div class="banner">
-		               	 	<div class="djs"><span id="new_year"></span></div>
-
-		                    <div id="demo01" class="flexslider" style="width:100%">
-		                   		 <ul class="slides" style="margin-top:200px">
-		                            <li>
-		                                    <div class="img1" style="background:url(/static/img/sjtu.png)  no-repeat; height:800px; width:800px"></div>
-		                            </li>
-		                            <li>
-		                                    <a target="_blank" href="">
-		                                        <div class="img1" style="background:url(/static/img/a.jpg)  no-repeat center top; height:800px; width:800px"></div>
-		                                    </a>
-		                            </li>
-		                            <li>
-		                                    <a target="_blank" href="">
-		                                        <div class="img1" style="background:url(/static/img/b.jpg)  no-repeat center top; height:800px; width:1000px"></div>
-		                                    </a>
-		                            </li>
-		                            <li>
-		                                    <div class="img1" style="background:url(/static/img/c.jpg)  no-repeat center top; height:800px; width:800px"></div>
-		                            </li>
-		                            <li>
-		                                    <div class="img1" style="background:url(/static/img/d.jpg)  no-repeat center top; height:800px; width:800px"></div>
-		                            </li>
-		                            <li>
-		                                    <a target="_blank" href="">
-		                                        <div class="img1" style="background:url(/static/img/e.jpg)  no-repeat center top; height:800px; width:800px"></div>
-		                                    </a>
-		                            </li>
-		                    	</ul>
-		                	</div>
-
-		                	<div class="logo_left">
-		                    	<img src="/static/img/logo_left.png" width="63" height="92" alt="" />
-		               		</div>
-		                	<div class="logo_right">
-		                   		<img src="/static/img/logo_right.png" width="92" height="92" alt="" />
-		                	</div>
-		            	</div>
-		        	</div>
-
-                </div>
-            </div>
-
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		 <script type="text/javascript">
-            $(function () {
-                $('#demo01').flexslider({
-                    animation: "slide",
-                    direction: "horizontal",
-                    easing: "swing"
-                });
+	 <script type="text/javascript">
+        $(function () {
+            $('#demo01').flexslider({
+                animation: "slide",
+                direction: "horizontal",
+                easing: "swing"
             });
-        </script>
-
-</body>
-</html>
+        });
+    </script>
+ {% endblock %}
